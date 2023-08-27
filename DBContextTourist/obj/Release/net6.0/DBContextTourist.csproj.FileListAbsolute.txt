@@ -1,0 +1,14 @@
+C:\Users\layla\Desktop\touristApp\DBContextTourist\bin\Release\net6.0\DBContextTourist.deps.json
+C:\Users\layla\Desktop\touristApp\DBContextTourist\bin\Release\net6.0\DBContextTourist.runtimeconfig.json
+C:\Users\layla\Desktop\touristApp\DBContextTourist\bin\Release\net6.0\DBContextTourist.dll
+C:\Users\layla\Desktop\touristApp\DBContextTourist\bin\Release\net6.0\ref\DBContextTourist.dll
+C:\Users\layla\Desktop\touristApp\DBContextTourist\bin\Release\net6.0\DBContextTourist.pdb
+C:\Users\layla\Desktop\touristApp\DBContextTourist\obj\Release\net6.0\DBContextTourist.csproj.AssemblyReference.cache
+C:\Users\layla\Desktop\touristApp\DBContextTourist\obj\Release\net6.0\DBContextTourist.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\layla\Desktop\touristApp\DBContextTourist\obj\Release\net6.0\DBContextTourist.AssemblyInfoInputs.cache
+C:\Users\layla\Desktop\touristApp\DBContextTourist\obj\Release\net6.0\DBContextTourist.AssemblyInfo.cs
+C:\Users\layla\Desktop\touristApp\DBContextTourist\obj\Release\net6.0\DBContextTourist.csproj.CoreCompileInputs.cache
+C:\Users\layla\Desktop\touristApp\DBContextTourist\obj\Release\net6.0\DBContextTourist.dll
+C:\Users\layla\Desktop\touristApp\DBContextTourist\obj\Release\net6.0\ref\DBContextTourist.dll
+C:\Users\layla\Desktop\touristApp\DBContextTourist\obj\Release\net6.0\DBContextTourist.pdb
+C:\Users\layla\Desktop\touristApp\DBContextTourist\obj\Release\net6.0\DBContextTourist.genruntimeconfig.cache

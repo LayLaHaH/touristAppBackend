@@ -1,0 +1,15 @@
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\bin\Debug\net6.0\RepositoriesAndUOW.deps.json
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\bin\Debug\net6.0\RepositoriesAndUOW.dll
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\bin\Debug\net6.0\ref\RepositoriesAndUOW.dll
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\bin\Debug\net6.0\RepositoriesAndUOW.pdb
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\obj\Debug\net6.0\RepositoriesAndUOW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\obj\Debug\net6.0\RepositoriesAndUOW.AssemblyInfoInputs.cache
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\obj\Debug\net6.0\RepositoriesAndUOW.AssemblyInfo.cs
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\obj\Debug\net6.0\RepositoriesAndUOW.csproj.CoreCompileInputs.cache
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\obj\Debug\net6.0\RepositoriesAndUOW.dll
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\obj\Debug\net6.0\ref\RepositoriesAndUOW.dll
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\obj\Debug\net6.0\RepositoriesAndUOW.pdb
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\bin\Debug\net6.0\DBContextTourist.dll
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\bin\Debug\net6.0\DBContextTourist.pdb
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\obj\Debug\net6.0\RepositoriesAndUOW.csproj.CopyComplete
+C:\Users\layla\Desktop\touristApp\RepositoriesAndUOW\obj\Debug\net6.0\RepositoriesAndUOW.csproj.AssemblyReference.cache
