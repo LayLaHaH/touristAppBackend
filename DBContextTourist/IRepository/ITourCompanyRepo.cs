@@ -7,7 +7,7 @@ namespace DBContextTourist.IRepository
 {
     public interface ITourCompanyRepo : IBaseRepo<TourCompany>
     {
-        
 
+        public int UserCompany(string UserId);
     }
 }

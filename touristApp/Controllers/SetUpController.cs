@@ -137,6 +137,27 @@ namespace touristApp.Controllers
             }
 
         }
+        [HttpDelete("DeleteUser")]
+        public async Task<IActionResult> DeleteUser([FromForm] string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                _logger.LogInformation($"the user with {email} doesn't exist");
+                return BadRequest($"the user with {email} doesn't exist");
+            }
 
+            var result = await _userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                return Ok(new { result = "success, user has been deleted" });
+            }
+            else
+            {
+                _logger.LogInformation($"unable to delete user {email}");
+                return BadRequest($"unable to delete user {email}");
+            }
         }
+
+    }
 }

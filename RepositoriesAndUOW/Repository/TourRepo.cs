@@ -16,5 +16,19 @@ namespace RepositoriesAndUOW.Reopsitory
         {
             return _touristsContext.Tours;
         }
+
+        public List<Tour> GetToursOfCompany(string userId)
+        {
+            var company = _touristsContext.TourCompanies.FirstOrDefault(c => c.UserId == userId);
+            if (company != null)
+            {
+                var tours = _touristsContext.Tours
+               .Where(t => t.CompanyId == company.Id)
+               .ToList();
+
+                return tours;
+            }
+            return new List<Tour>();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace DBContextTourist.Models
 {
@@ -22,8 +23,9 @@ namespace DBContextTourist.Models
         public bool IsPrivate { get; set; }
         public string GuidLanguage { get; set; } = null!;
         public int CompanyId { get; set; }
-
+        [JsonIgnore]
         public virtual TourCompany Company { get; set; } = null!;
+
         public virtual ICollection<Exclude> Excludes { get; set; }
         public virtual ICollection<Include> Includes { get; set; }
         public virtual ICollection<Itinerary> Itineraries { get; set; }

@@ -52,7 +52,7 @@ namespace DBContextTourist.Models
                 entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.CloseTime)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasColumnName("closeTime");
 
                 entity.Property(e => e.Description)
@@ -78,7 +78,7 @@ namespace DBContextTourist.Models
                     .HasColumnName("price");
 
                 entity.Property(e => e.StartTime)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasColumnName("startTime");
 
                 entity.Property(e => e.StartingDay)
@@ -328,7 +328,7 @@ namespace DBContextTourist.Models
                 entity.Property(e => e.ClassStar).HasColumnName("classStar");
 
                 entity.Property(e => e.ClosingHour)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasColumnName("closingHour");
 
                 entity.Property(e => e.ContactNumber)
@@ -352,7 +352,7 @@ namespace DBContextTourist.Models
                     .HasColumnName("name");
 
                 entity.Property(e => e.OpeningHour)
-                    .HasColumnType("date")
+                    .HasColumnType("datetime")
                     .HasColumnName("openingHour");
 
                 entity.Property(e => e.Url)

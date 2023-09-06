@@ -27,7 +27,6 @@
     <Folder Include="wwwroot\img\Cities\" />
     <Folder Include="wwwroot\img\Hotels\" />
     <Folder Include="wwwroot\img\Activities\" />
-    <Folder Include="wwwroot\img\Destinations\" />
     <Folder Include="wwwroot\img\Restaurants\" />
   </ItemGroup>
 

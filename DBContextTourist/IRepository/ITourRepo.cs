@@ -9,6 +9,7 @@ namespace DBContextTourist.IRepository
     {
 
         public IQueryable<Tour> GetAll2();
+        public List<Tour> GetToursOfCompany(string userId);
        
     }
 }

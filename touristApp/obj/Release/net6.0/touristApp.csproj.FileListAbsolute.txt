@@ -62,3 +62,7 @@ C:\Users\layla\Desktop\touristApp\touristApp\obj\Release\net6.0\touristApp.dll
 C:\Users\layla\Desktop\touristApp\touristApp\obj\Release\net6.0\ref\touristApp.dll
 C:\Users\layla\Desktop\touristApp\touristApp\obj\Release\net6.0\touristApp.pdb
 C:\Users\layla\Desktop\touristApp\touristApp\obj\Release\net6.0\touristApp.genruntimeconfig.cache
+C:\Users\layla\Desktop\touristApp\touristApp\bin\Release\net6.0\touristApp.staticwebassets.runtime.json
+C:\Users\layla\Desktop\touristApp\touristApp\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\layla\Desktop\touristApp\touristApp\bin\Release\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\layla\Desktop\touristApp\touristApp\bin\Release\net6.0\Microsoft.AspNetCore.Identity.UI.dll

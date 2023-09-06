@@ -58,7 +58,9 @@ namespace touristApp.Controllers
                 var new_user = new IdentityUser()
                 {
                     Email = registrationRequest.Email,
-                    UserName = registrationRequest.Name
+                    UserName = registrationRequest.Name,
+
+                    
                 };
 
                 var is_created = await _userManager.CreateAsync(new_user, registrationRequest.Password);
@@ -70,10 +72,14 @@ namespace touristApp.Controllers
 
                     //generate a token
                     var token = await GenerateJwtTokenAsync(new_user);
+                    var companyId = _unitOfWork.TourCompanyRepository.UserCompany(new_user.Id);
+                    
                     return Ok(new AuthResult()
                     {
                         Result = true,
-                        Token = token
+                        Token = token,
+                        UserId=new_user.Id,
+                        CompanyId = companyId
                     });
                 }
                 else
@@ -120,10 +126,12 @@ namespace touristApp.Controllers
                     });
                 }
                 var token = await GenerateJwtTokenAsync(user_exist);
+                var companyId = _unitOfWork.TourCompanyRepository.UserCompany(user_exist.Id);
                 return Ok(new AuthResult()
                 {
                     Result = true,
-                    Token = token
+                    Token = token,
+                    CompanyId = companyId
                 });
 
             }

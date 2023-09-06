@@ -11,5 +11,11 @@ namespace RepositoriesAndUOW.Reopsitory
         public TourCompanyRepo(touristsContext touristsContext) : base(touristsContext)
         {
         }
+
+        public int UserCompany(string UserId)
+        {
+            var company = _touristsContext.TourCompanies.FirstOrDefault(c => c.UserId == UserId);
+            return company != null ? company.Id : 0;
+        }
     }
 }

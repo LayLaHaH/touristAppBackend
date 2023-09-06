@@ -63,6 +63,7 @@ namespace touristApp.Controllers
                 Image=market.Image ,
                 Name=market.Name ,
                 Description=market.Description ,
+                Address = market.Address
             };
 
             _unitOfWork.MarketRepository.Add(_market);
@@ -85,6 +86,7 @@ namespace touristApp.Controllers
             existingRecord.Name = updatedData.Name;
             existingRecord.Description = updatedData.Description;
             existingRecord.Image = updatedData.Image;
+            existingRecord.Address = updatedData.Address;   
             existingRecord.CityId = updatedData.CityId;
             _unitOfWork.SaveChanges();
 

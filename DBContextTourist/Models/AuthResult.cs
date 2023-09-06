@@ -10,6 +10,8 @@ namespace DBContextTourist.Models
     {
         public string Token { get; set; }
         public bool Result { get; set; }
+        public string UserId { get; set; }
+        public int CompanyId { get; set; }
         public List<string> Errors { get; set; }
     }
 }

@@ -32,7 +32,7 @@ namespace DBContextTourist.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CloseTime")
-                        .HasColumnType("date")
+                        .HasColumnType("datetime")
                         .HasColumnName("closeTime");
 
                     b.Property<string>("Description")
@@ -63,7 +63,7 @@ namespace DBContextTourist.Migrations
                         .HasColumnName("price");
 
                     b.Property<DateTime>("StartTime")
-                        .HasColumnType("date")
+                        .HasColumnType("datetime")
                         .HasColumnName("startTime");
 
                     b.Property<DateTime?>("StartingDay")
@@ -362,6 +362,10 @@ namespace DBContextTourist.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("CityId")
                         .HasColumnType("int")
                         .HasColumnName("cityID");
@@ -417,7 +421,7 @@ namespace DBContextTourist.Migrations
                         .HasColumnName("classStar");
 
                     b.Property<DateTime>("ClosingHour")
-                        .HasColumnType("date")
+                        .HasColumnType("datetime")
                         .HasColumnName("closingHour");
 
                     b.Property<string>("ContactNumber")
@@ -449,7 +453,7 @@ namespace DBContextTourist.Migrations
                         .HasColumnName("name");
 
                     b.Property<DateTime>("OpeningHour")
-                        .HasColumnType("date")
+                        .HasColumnType("datetime")
                         .HasColumnName("openingHour");
 
                     b.Property<string>("Url")
@@ -551,7 +555,13 @@ namespace DBContextTourist.Migrations
                         .HasColumnType("varchar(50)")
                         .HasColumnName("name");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(225)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("TourCompany", (string)null);
                 });
@@ -917,6 +927,17 @@ namespace DBContextTourist.Migrations
                         .HasConstraintName("FK_Tour_TourCompany");
 
                     b.Navigation("Company");
+                });
+
+            modelBuilder.Entity("DBContextTourist.Models.TourCompany", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("DBContextTourist.Models.TourHasActivity", b =>

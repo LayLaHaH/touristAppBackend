@@ -34,6 +34,42 @@ namespace touristApp.Controllers
 
             return Ok(tours);
         }
+        [HttpGet("GetCompanyTours")]
+        public IActionResult GetCompanyTours(string userId)
+        {
+            var tours = _unitOfWork.TourRepository.GetToursOfCompany(userId);
+           
+            if (tours != null)
+            {
+                return Ok(tours);
+            }
+            return BadRequest("there is no tours");
+        }
+        [HttpGet("search")]
+        public IActionResult Search(string value)
+        {
+            if (value == "private")
+            {
+                value = true.ToString();
+            }
+            else if (value == "group")
+            {
+                value = false.ToString();
+            }
+            var customers = string.IsNullOrEmpty(value) ? _unitOfWork.TourRepository.GetAll().Reverse()
+            : _unitOfWork.TourRepository.GetAll().Reverse()
+            .Where(e => e.Name.ToLower().Contains(value.ToLower()) ||
+            e.Theme.ToLower().Contains(value.ToLower()) ||
+            e.GuidLanguage.ToString().ToLower().Contains(value.ToLower())||
+            e.IsPrivate.ToString().ToLower().Contains(value.ToLower()));
+
+            return Json(new
+            {
+                success = true,
+                message = "filterd data",
+                data = customers
+            });
+        }
 
         [HttpGet("{id}/destination-pictures")]
         public IActionResult GetDestinationPictures(int id)

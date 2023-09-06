@@ -1,5 +1,6 @@
 ﻿using DBContextTourist;
 using DBContextTourist.Models;
+using DBContextTourist.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,22 +28,29 @@ namespace touristApp.Controllers
         }
 
         [HttpPost("create")]
-        public IActionResult create([FromForm] TourCompany tourCompany)
+        public IActionResult create([FromForm] TourCompanyVM tourCompany)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _unitOfWork.TourCompanyRepository.Add(tourCompany);
+            TourCompany _company = new TourCompany
+            {
+                Name = tourCompany.Name,
+                ContactNumber = tourCompany.ContactNumber,
+                Address = tourCompany.Address,
+                UserId = tourCompany.UserId,
+            };
+
+            _unitOfWork.TourCompanyRepository.Add(_company);
             _unitOfWork.SaveChanges();
+             var companyID=_company.Id;
 
-
-            return Ok(CreatedAtAction(nameof(getAll), new { id = tourCompany.Id }, tourCompany));
-
+            return Ok(companyID);
         }
         [HttpPut("update")]
-        public IActionResult Update(int id, [FromForm] TourCompany updatedData)
+        public IActionResult Update(int id, [FromForm] TourCompanyVM updatedData)
         {
             var existingRecord = _unitOfWork.TourCompanyRepository.GetByID(id);
 
@@ -54,7 +62,9 @@ namespace touristApp.Controllers
             existingRecord.Name = updatedData.Name;
             existingRecord.ContactNumber = updatedData.ContactNumber;
             existingRecord.Address = updatedData.Address;
+            existingRecord.UserId = updatedData.UserId;
 
+            _unitOfWork.TourCompanyRepository.Update(existingRecord);
             _unitOfWork.SaveChanges();
 
             return Json(new
